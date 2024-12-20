@@ -10,7 +10,7 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 <a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/financial_loan.csv">Dataset</a>
 ## Schema
 
-##1.Total Loan Applications?
+1. ##Total Loan Applications?
 
 select count(id) as Total_Loan_Applications 
 from financial_loan;
