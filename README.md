@@ -12,145 +12,339 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 
 <b>1.Total Loan Applications?</b>
 
-select count(id) as Total_Loan_Applications 
+select 
+
+count(id) as Total_Loan_Applications 
 
 from financial_loan;
 
-2.MTD Loan Applications
+<b>2.Calculate Month to date (MTD) loan Applications?
 
-select count(id) as Total_MTD_Loan_Aplications
+select 
+
+count(id) as Total_MTD_Loan_Aplications
 
 from financial_loan
 
 where month(issue_date)=12;
 
-3.PMTD Loan Applications
+<b>3.Find Previous moth to date loan applications?
 
-select count(id) AS Total_PMTD_Loan_Applications
+select 
+
+count(id) AS Total_PMTD_Loan_Applications
 
 FROM financial_loan
 
 where month(issue_date) = 11;
 
-4.Total Funded Amount
+<b>4.Find Total Funded Amount Received by Bank?
 
-Select sum(loan_amount) as Total_funded_Amount 
+Select 
+
+sum(loan_amount) as Total_funded_Amount 
 
 from financial_loan;
 
-5.MTD Total Funded Amount
+<b>5.Calculate Month to Date funded amont by Bank?
 
-select sum(loan_amount) as Total_MTD_Loan_Amount 
+select 
+
+sum(loan_amount) as Total_MTD_Loan_Amount 
 
 from financial_loan 
 
 where Month(issue_date)=12;
 
-6.PMTD Total Funded Amount
+<b>6.Find Total PMTD funded Amount by Bank?
 
-select sum(loan_amount) as Total_PMTD_Funded_Amount 
+select 
+
+sum(loan_amount) as Total_PMTD_Funded_Amount 
 
 from financial_loan 
 
 where Month(issue_date)=11;
 
-7.Total Amount Received
+<b>7.Calculate Total amount recived by Bank?
 
-select sum(total_payment) as Total_Amount_Recieved 
+select 
+
+sum(total_payment) as Total_Amount_Recieved 
 
 from financial_loan;
 
-8.MTD Total Amount Received
+<b>8.Calculate MTD amount received by Bank?
 
-select sum(total_payment) as Total_MTD_Amount_Recieved 
+select 
+
+sum(total_payment) as Total_MTD_Amount_Recieved 
 
 from financial_loan
 
 where Month(issue_date)=12;
 
-9.PMTD Total Amount Received
+<b>9.Calculate Total PMTD amount received by Bank?
 
-select sum(total_payment) as Total_PMTD_Amount_Recieved 
+select 
+
+sum(total_payment) as Total_PMTD_Amount_Recieved 
 
 from financial_loan
 
 where Month(issue_date)=11;
 
-10.Average Interest Rate
+<b>10.Calculate Total Average Intrest rate ?
 
-select avg(int_rate)*100 as Avg_Int_rate 
+select 
+
+avg(int_rate)*100 as Avg_Int_rate 
 
 from financial_loan; 
 
-11.MTD Average Interest Rate
+<b>11.Find month to date Average Intrest rate?
 
-select avg(int_rate)*100 as MTD_Avg_Int_rate 
+select 
+
+avg(int_rate)*100 as MTD_Avg_Int_rate 
 
 from financial_loan
 
 where month(issue_date)=12;
 
-12.PMTD Average Interest Rate
+<b>12.Calculate Average PMTD Intrest Rate?
 
-select avg(int_rate)*100 as PMTD_Avg_Int_rate 
+select 
+
+avg(int_rate)*100 as PMTD_Avg_Int_rate 
 
 from financial_loan
  
 where month(issue_date)=11;
 
-13.Avg DTI
+<b>13.Calculate Total Average DTI ?
 
-select avg(dti)*100 as Avg_dti 
+select 
+
+avg(dti)*100 as Avg_dti 
 
 from financial_loan;
 
-14.MTD Avg DTI 
+<b>14.Find month to date average DTI?
 
- select avg(dti)*100 as MTD_Avg_dti 
+ select 
+ 
+ avg(dti)*100 as MTD_Avg_dti 
  
  from financial_loan
  
  where month(issue_date)=12;
 
- 15.PMTD Avg DTI  
+ <b>15. Calculate Average PMTD DTI?
  
- select avg(dti)*100 as PMTD_Avg_dti 
+ select 
+ 
+ avg(dti)*100 as PMTD_Avg_dti 
  
  from financial_loan
  
  where month(issue_date)=11;
 
-16.Good Loan Percentage
+<b>16.What Percent of Good Loan issued by Bank?
 
-select (count(case when loan_status = "Fully Paid" or loan_status = "Current" then id end)*100.0)/
+select 
+
+(count(case when loan_status = "Fully Paid" or loan_status = "Current" then id end)*100.0)/
 
 count(id) as Good_loan_Percentage 
 
 from financial_loan;
 
-17.How many Good Loan Applications are issued?
+<b>17.How many Good Loan Applications are issued?
 
-select count(id) AS Good_Loan_Applications 
+select 
 
-FROM financial_loan
-
-where loan_status = "Fully Paid" OR loan_status = "Current";
-
-18.How much Good Loan amount Funded?
-
-select sum(loan_amount) AS Good_loan_Funded_Amount 
+count(id) AS Good_Loan_Applications 
 
 FROM financial_loan
 
 where loan_status = "Fully Paid" OR loan_status = "Current";
 
-Good Loan Amount Recieved
+<b>18.How much Good Loan amount Funded?
 
-select sum(total_payment) AS Good_loan_Amount_received 
+select 
+
+sum(loan_amount) AS Good_loan_Funded_Amount 
 
 FROM financial_loan
 
 where loan_status = "Fully Paid" OR loan_status = "Current";
+
+<b>19.How much Total Good Loan Payments Received?
+
+select 
+
+sum(total_payment) AS Good_loan_Amount_received 
+
+FROM financial_loan
+
+where loan_status = "Fully Paid" OR loan_status = "Current";
+
+<b>20.What percent of Bad Loan issued by Bank?
+
+select 
+
+(count(case when loan_status = "Charged Off" then id end)*100.0)/
+
+count(id) as Bad_loan_percentage 
+
+from financial_loan;
+
+<b>21.How many Bad Loan Appliactions are issued?
+
+select
+
+count(id) AS Bad_Loan_Applications 
+
+FROM financial_loan
+
+where loan_status = "Charged Off";
+
+<b>22.How much Bad Loan Amount Funded?
+
+select 
+
+sum(loan_amount) AS Bad_loan_Funded_Amount 
+
+FROM financial_loan
+
+where loan_status = "Charged Off";
+
+<b>23.How much Total Bad Loan Payments Received?
+
+select 
+
+sum(total_payment) AS Good_loan_Amount_received 
+
+FROM financial_loan
+
+where loan_status = "Charged Off";
+
+<b>24.Calculate applications,funded amount,total payments for each month?
+
+select 
+
+month(issue_date) as month_number ,
+
+monthname(issue_date) as Month_name,
+
+count(id) as Total_loan_Applications,
+
+sum(loan_amount) as Total_Funded_Amount,
+
+sum(total_payment) as Total_Amount_Recieved
+
+from financial_loan
+
+group by 1,2
+
+order by 1 asc;
+
+<b>25.Calculate applications,funded amount,total payments for each State?
+
+select
+
+address_state as state,
+
+count(id) as Total_loan_Applications,
+
+sum(loan_amount) as Total_Funded_Amount,
+
+sum(total_payment) as Total_Amount_Recieved
+
+from financial_loan
+
+group by address_state,
+
+order by address_state;
+
+<b>26.Calculate total applications ,funded amount,payments received by each Term?
+
+select 
+
+term as Term,
+
+count(id) as Total_loan_Applications,
+
+sum(loan_amount) as Total_Funded_Amount,
+
+sum(total_payment) as Total_Amount_Recieved
+
+from financial_loan
+
+group by term,
+
+order by term;
+
+<b>27.Calculate applications,funded amount,total payments for each Employ length?
+
+select 
+
+emp_length as Empployee_length,
+
+count(id) as Total_loan_Applications,
+
+sum(loan_amount) as Total_Funded_Amount,
+
+sum(total_payment) as Total_Amount_Recieved
+
+from financial_loan
+
+group by emp_length
+
+order by emp_length;
+
+<b>28.Calculate applications,funded amount,total payments for each Purpose?
+
+select 
+
+purpose as loan_purpose,
+
+count(id) as Total_loan_Applications,
+
+sum(loan_amount) as Total_Funded_Amount,
+
+sum(total_payment) as Total_Amount_Recieved
+
+from financial_loan
+
+group by 1
+
+order by 1;
+
+<b>29.Calculate applications,funded amount,total payments for each Home owenrship?
+
+select home_ownership as Home,
+
+count(id) as Total_loan_Applications,
+
+sum(loan_amount) as Total_Funded_Amount,
+
+sum(total_payment) as Total_Amount_Recieved
+
+from financial_loan
+
+group by 1
+
+order by 1;
+
+
+
+
+
+
+
+
 
 
 
