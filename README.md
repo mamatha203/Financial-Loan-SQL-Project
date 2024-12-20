@@ -8,6 +8,9 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 - List and analyse content based on release years, countries, and durations.
 ## Dataset
 <a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/financial_loan.csv">Dataset</a>
+## Schema
+sql
+ - select count(id) as Total_Loan_Applications from financial_loan;
 
 
 
