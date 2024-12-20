@@ -340,7 +340,7 @@ order by 1;
 
 ##Problem Statements
 
-<a href=" ">Dataset</a>
+<a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/Bank%20Loan%20Query%20Document.docx">Problems</a>
 
 ## Final Conclusion
 
