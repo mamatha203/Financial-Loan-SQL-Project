@@ -6,4 +6,7 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 - segment the loan data based on factors like loan status
 - insights into loan performance and borrower characteristics using SQL.
 - List and analyse content based on release years, countries, and durations.
+## Dataset
+<a href=”https://github.com/mamatha203/Ecommerce-Data-Analysis/blob/main/Ecommerce%20Data.xlsx”>Dataset</a>
+  
  
