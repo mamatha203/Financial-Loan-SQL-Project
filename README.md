@@ -123,6 +123,13 @@ count(id) as Good_loan_Percentage
 
 from financial_loan;
 
+17.How many Good Loan Applications are issued?
+![image](https://github.com/user-attachments/assets/323ce5a6-1f71-40e5-9afc-5a6acb22618c)
+
+
+18.How much Good Loan amount Funded?
+
+
 
 
 
