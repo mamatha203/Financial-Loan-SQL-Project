@@ -11,7 +11,7 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 ## Schema
 
 1.Total Loan Applications
-select count(id) as Total_Loan_Applications 
+-select count(id) as Total_Loan_Applications 
 from financial_loan;
 
 
