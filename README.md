@@ -338,7 +338,7 @@ group by 1
 
 order by 1;
 
--Queries Statements<a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/financial%20Loan%20queries.docx">Queries</a>
+-Queries Statements<a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/financial%20Loan%20queries.docx">View Document</a>
 
 ## Final Conclusion
 
