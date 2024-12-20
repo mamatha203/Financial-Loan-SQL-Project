@@ -338,6 +338,15 @@ group by 1
 
 order by 1;
 
+##Problem Statements
+
+<a href=" ">Dataset</a>
+
+## Final Conclusion
+
+The insights from these queries allow the bank to assess the overall performance of its loan portfolio, identify trends in loan approval and repayment across different segments, and highlight areas for improvement in risk management. In conclusion, this analysis helps the bank make informed decisions for optimizing loan offerings and improving financial performance.
+
+
 
 
 
