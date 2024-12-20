@@ -46,7 +46,7 @@ sum(loan_amount) as Total_funded_Amount
 
 from financial_loan;
 
-<b>5.Calculate Month to Date funded amont by Bank?
+<b>5.Calculate Month to Date funded amont by Bank?</b>
 
 select 
 
