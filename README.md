@@ -18,12 +18,120 @@ from financial_loan;
 2.MTD Loan Applications
 
 select count(id) as Total_MTD_Loan_Aplications from financial_loan
+
 where month(issue_date)=12;
 
 3.PMTD Loan Applications
 
-select count(id) AS Total_PMTD_Loan_Applications FROM financial_loa
+select count(id) AS Total_PMTD_Loan_Applications FROM financial_loan
+
 where month(issue_date) = 11;
+
+4.Total Funded Amount
+
+Select sum(loan_amount) as Total_funded_Amount 
+
+from financial_loan;
+
+5.MTD Total Funded Amount
+
+select sum(loan_amount) as Total_MTD_Loan_Amount 
+
+from financial_loan 
+
+where Month(issue_date)=12;
+
+6.PMTD Total Funded Amount
+
+select sum(loan_amount) as Total_PMTD_Funded_Amount 
+
+from financial_loan 
+
+where Month(issue_date)=11;
+
+7.Total Amount Received
+
+select sum(total_payment) as Total_Amount_Recieved 
+
+from financial_loan;
+
+8.MTD Total Amount Received
+
+select sum(total_payment) as Total_MTD_Amount_Recieved 
+
+from financial_loan
+
+where Month(issue_date)=12;
+
+9.PMTD Total Amount Received
+
+select sum(total_payment) as Total_PMTD_Amount_Recieved 
+
+from financial_loan
+
+where Month(issue_date)=11;
+
+10.Average Interest Rate
+
+select avg(int_rate)*100 as Avg_Int_rate 
+
+from financial_loan; 
+
+11.MTD Average Interest Rate
+
+select avg(int_rate)*100 as MTD_Avg_Int_rate 
+
+from financial_loan
+
+where month(issue_date)=12;
+
+12.PMTD Average Interest Rate
+
+select avg(int_rate)*100 as PMTD_Avg_Int_rate 
+
+from financial_loan
+ 
+where month(issue_date)=11;
+
+13.Avg DTI
+
+select avg(dti)*100 as Avg_dti 
+
+from financial_loan;
+
+14.MTD Avg DTI 
+
+ select avg(dti)*100 as MTD_Avg_dti 
+ 
+ from financial_loan
+ 
+ where month(issue_date)=12;
+
+ 15.PMTD Avg DTI  
+ 
+ select avg(dti)*100 as PMTD_Avg_dti 
+ 
+ from financial_loan
+ 
+ where month(issue_date)=11;
+
+16.Good Loan Percentage
+
+select (count(case when loan_status = "Fully Paid" or loan_status = "Current" then id end)*100.0)/
+
+count(id) as Good_loan_Percentage 
+
+from financial_loan;
+
+
+
+
+
+
+
+
+
+
 
 
 
