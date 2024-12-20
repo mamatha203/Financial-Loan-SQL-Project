@@ -9,6 +9,6 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 ## Dataset
 <a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/financial_loan.csv">Dataset</a>
 
-  ![image](https://github.com/user-attachments/assets/9db92626-a8ca-4860-81a4-4822e7b84198)
+
 
  
