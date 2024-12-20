@@ -10,30 +10,35 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 <a href="https://github.com/mamatha203/Financial-Loan-SQL-Project/blob/main/financial_loan.csv">Dataset</a>
 ## Schema
 
-1.**Total Loan Applications?
+<b>1.Total Loan Applications?</b>
 
 select count(id) as Total_Loan_Applications 
+
 from financial_loan;
 
-##2.MTD Loan Applications
+2.MTD Loan Applications
 
-select count(id) as Total_MTD_Loan_Aplications from financial_loan
+select count(id) as Total_MTD_Loan_Aplications
+
+from financial_loan
 
 where month(issue_date)=12;
 
-##3.PMTD Loan Applications
+3.PMTD Loan Applications
 
-select count(id) AS Total_PMTD_Loan_Applications FROM financial_loan
+select count(id) AS Total_PMTD_Loan_Applications
+
+FROM financial_loan
 
 where month(issue_date) = 11;
 
-##4.Total Funded Amount
+4.Total Funded Amount
 
 Select sum(loan_amount) as Total_funded_Amount 
 
 from financial_loan;
 
-##5.MTD Total Funded Amount
+5.MTD Total Funded Amount
 
 select sum(loan_amount) as Total_MTD_Loan_Amount 
 
