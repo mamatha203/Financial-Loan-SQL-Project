@@ -11,15 +11,15 @@ This project provides a detailed analysis of loan applications, funded amounts, 
 ## Schema
 
 <b>1.Total Loan Applications?</b>
-
+ ```sql
 select 
 
 count(id) as Total_Loan_Applications 
 
 from financial_loan;
-
+ ```
 <b>2.Calculate Month to date (MTD) loan Applications?</b>
-
+ ```sql
 select 
 
 count(id) as Total_MTD_Loan_Aplications
@@ -27,7 +27,7 @@ count(id) as Total_MTD_Loan_Aplications
 from financial_loan
 
 where month(issue_date)=12;
-
+ ```
 <b>3.Find Previous moth to date loan applications?</b>
 
 select 
